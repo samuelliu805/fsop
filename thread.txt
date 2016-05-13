@@ -1,0 +1,161 @@
+     0.000000 execve("/usr/bin/sysbench", ["sysbench", "--test=fileio", "--file-total-size=1MB", "--file-test-mode=rndwr", "--max-time=5", "--max-requests=0", "--file-block-size=4K", "--file-num=4", "--num-threads=3", "run"], [/* 60 vars */]) = 0
+     0.000231 brk(0)                    = 0x1c15000
+     0.000040 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+     0.000026 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f44b7620000
+     0.000029 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+     0.000022 open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+     0.000023 fstat(3, {st_mode=S_IFREG|0644, st_size=89600, ...}) = 0
+     0.000023 mmap(NULL, 89600, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f44b760a000
+     0.000020 close(3)                  = 0
+     0.000020 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+     0.000024 open("/usr/lib/x86_64-linux-gnu/libmysqlclient.so.18", O_RDONLY|O_CLOEXEC) = 3
+     0.000024 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p\36\3\0\0\0\0\0"..., 832) = 832
+     0.000036 fstat(3, {st_mode=S_IFREG|0644, st_size=3909768, ...}) = 0
+     0.000022 mmap(NULL, 6026936, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f44b6e3f000
+     0.000021 mprotect(0x7f44b7129000, 2097152, PROT_NONE) = 0
+     0.000020 mmap(0x7f44b7329000, 856064, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2ea000) = 0x7f44b7329000
+     0.000027 mmap(0x7f44b73fa000, 18104, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f44b73fa000
+     0.000027 close(3)                  = 0
+     0.000024 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+     0.000024 open("/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+     0.000023 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\340`\0\0\0\0\0\0"..., 832) = 832
+     0.000020 fstat(3, {st_mode=S_IFREG|0755, st_size=142080, ...}) = 0
+     0.000021 mmap(NULL, 2217232, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f44b6c21000
+     0.000022 mprotect(0x7f44b6c39000, 2097152, PROT_NONE) = 0
+     0.000022 mmap(0x7f44b6e39000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0x7f44b6e39000
+     0.000027 mmap(0x7f44b6e3b000, 13584, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f44b6e3b000
+     0.000025 close(3)                  = 0
+     0.000021 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+     0.000023 open("/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+     0.000022 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240U\0\0\0\0\0\0"..., 832) = 832
+     0.000021 fstat(3, {st_mode=S_IFREG|0644, st_size=1084840, ...}) = 0
+     0.000020 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f44b7609000
+     0.000023 mmap(NULL, 3174760, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f44b6919000
+     0.000021 mprotect(0x7f44b6a20000, 2093056, PROT_NONE) = 0
+     0.000021 mmap(0x7f44b6c1f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x106000) = 0x7f44b6c1f000
+     0.000028 close(3)                  = 0
+     0.000021 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+     0.000025 open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+     0.000022 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\v\2\0\0\0\0\0"..., 832) = 832
+     0.000019 fstat(3, {st_mode=S_IFREG|0755, st_size=1869392, ...}) = 0
+     0.000021 mmap(NULL, 3972864, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f44b654f000
+     0.000021 mprotect(0x7f44b670f000, 2097152, PROT_NONE) = 0
+     0.000021 mmap(0x7f44b690f000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1c0000) = 0x7f44b690f000
+     0.000027 mmap(0x7f44b6915000, 16128, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f44b6915000
+     0.000024 close(3)                  = 0
+     0.000024 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+     0.000028 open("/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+     0.000022 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360\35\0\0\0\0\0\0"..., 832) = 832
+     0.000020 fstat(3, {st_mode=S_IFREG|0644, st_size=104824, ...}) = 0
+     0.000023 mmap(NULL, 2199880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f44b6335000
+     0.000022 mprotect(0x7f44b634e000, 2093056, PROT_NONE) = 0
+     0.000021 mmap(0x7f44b654d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0x7f44b654d000
+     0.000029 close(3)                  = 0
+     0.000021 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+     0.000022 open("/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+     0.000022 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\16\0\0\0\0\0\0"..., 832) = 832
+     0.000020 fstat(3, {st_mode=S_IFREG|0644, st_size=14592, ...}) = 0
+     0.000021 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f44b7608000
+     0.000023 mmap(NULL, 2109712, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f44b6131000
+     0.000021 mprotect(0x7f44b6134000, 2093056, PROT_NONE) = 0
+     0.000021 mmap(0x7f44b6333000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f44b6333000
+     0.000028 close(3)                  = 0
+     0.000019 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+     0.000023 open("/usr/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+     0.000023 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \240\10\0\0\0\0\0"..., 832) = 832
+     0.000020 fstat(3, {st_mode=S_IFREG|0644, st_size=1566568, ...}) = 0
+     0.000021 mmap(NULL, 3675328, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f44b5daf000
+     0.000020 mprotect(0x7f44b5f22000, 2093056, PROT_NONE) = 0
+     0.000021 mmap(0x7f44b6121000, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x172000) = 0x7f44b6121000
+     0.000027 mmap(0x7f44b612d000, 13504, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f44b612d000
+     0.000026 close(3)                  = 0
+     0.000023 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+     0.000023 open("/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+     0.000022 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360*\0\0\0\0\0\0"..., 832) = 832
+     0.000019 fstat(3, {st_mode=S_IFREG|0644, st_size=92504, ...}) = 0
+     0.000022 mmap(NULL, 2188352, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f44b5b98000
+     0.000021 mprotect(0x7f44b5bae000, 2093056, PROT_NONE) = 0
+     0.000021 mmap(0x7f44b5dad000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15000) = 0x7f44b5dad000
+     0.000029 close(3)                  = 0
+     0.000023 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f44b7607000
+     0.000035 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f44b7606000
+     0.000024 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f44b7604000
+     0.000023 arch_prctl(ARCH_SET_FS, 0x7f44b7604740) = 0
+     0.000060 mprotect(0x7f44b690f000, 16384, PROT_READ) = 0
+     0.000027 mprotect(0x7f44b5dad000, 4096, PROT_READ) = 0
+     0.000033 mprotect(0x7f44b6c1f000, 4096, PROT_READ) = 0
+     0.000471 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f44b7603000
+     0.000076 mprotect(0x7f44b6121000, 40960, PROT_READ) = 0
+     0.000027 mprotect(0x7f44b6333000, 4096, PROT_READ) = 0
+     0.000023 mprotect(0x7f44b654d000, 4096, PROT_READ) = 0
+     0.000027 mprotect(0x7f44b6e39000, 4096, PROT_READ) = 0
+     0.000273 mprotect(0x7f44b7329000, 20480, PROT_READ) = 0
+     0.000027 mprotect(0x61a000, 4096, PROT_READ) = 0
+     0.000024 mprotect(0x7f44b7622000, 4096, PROT_READ) = 0
+     0.000021 munmap(0x7f44b760a000, 89600) = 0
+     0.000028 set_tid_address(0x7f44b7604a10) = 8017
+     0.000023 set_robust_list(0x7f44b7604a20, 24) = 0
+     0.000022 rt_sigaction(SIGRTMIN, {0x7f44b6c26bb0, [], SA_RESTORER|SA_SIGINFO, 0x7f44b6c31d10}, NULL, 8) = 0
+     0.000026 rt_sigaction(SIGRT_1, {0x7f44b6c26c40, [], SA_RESTORER|SA_RESTART|SA_SIGINFO, 0x7f44b6c31d10}, NULL, 8) = 0
+     0.000020 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+     0.000027 getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+     0.000073 brk(0)                    = 0x1c15000
+     0.000018 brk(0x1c47000)            = 0x1c47000
+     0.000096 write(1, "sysbench 0.4.12:  multi-threaded"..., 62) = 62
+     0.000044 rt_sigaction(SIGALRM, {0x402b40, [ALRM], SA_RESTORER|SA_RESTART, 0x7f44b65842f0}, {SIG_DFL, [], 0}, 8) = 0
+     0.000041 write(1, "Running the test with following "..., 41) = 41
+     0.000031 write(1, "Number of threads: 3\n", 21) = 21
+     0.000027 write(1, "\n", 1)         = 1
+     0.000026 write(1, "Extra file open flags: 0\n", 25) = 25
+     0.000031 write(1, "4 files, 256Kb each\n", 20) = 20
+     0.000029 write(1, "1Mb total file size\n", 20) = 20
+     0.000027 write(1, "Block size 4Kb\n", 15) = 15
+     0.000028 write(1, "Number of random requests for ra"..., 43) = 43
+     0.000027 write(1, "Read/Write ratio for combined ra"..., 51) = 51
+     0.000028 write(1, "Periodic FSYNC enabled, calling "..., 59) = 59
+     0.000028 write(1, "Calling fsync() at the end of te"..., 45) = 45
+     0.000026 write(1, "Using synchronous I/O mode\n", 27) = 27
+     0.000028 write(1, "Doing random write test\n", 24) = 24
+     0.000029 open("test_file.0", O_RDWR|O_CREAT, 0600) = 3
+     0.000028 open("test_file.1", O_RDWR|O_CREAT, 0600) = 4
+     0.000023 open("test_file.2", O_RDWR|O_CREAT, 0600) = 5
+     0.000023 open("test_file.3", O_RDWR|O_CREAT, 0600) = 6
+     0.000025 mmap(NULL, 32768, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f44b7618000
+     0.000027 mprotect(0x7f44b7618000, 4096, PROT_NONE) = 0
+     0.000023 clone(child_stack=0x7f44b761efb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f44b761f9d0, tls=0x7f44b761f700, child_tidptr=0x7f44b761f9d0) = 8018
+     0.000030 mmap(NULL, 32768, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f44b7610000
+     0.000023 mprotect(0x7f44b7610000, 4096, PROT_NONE) = 0
+     0.000021 clone(child_stack=0x7f44b7616fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f44b76179d0, tls=0x7f44b7617700, child_tidptr=0x7f44b76179d0) = 8019
+     0.000026 mmap(NULL, 32768, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f44b75fb000
+     0.000021 mprotect(0x7f44b75fb000, 4096, PROT_NONE) = 0
+     0.000022 clone(child_stack=0x7f44b7601fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f44b76029d0, tls=0x7f44b7602700, child_tidptr=0x7f44b76029d0) = 8020
+     0.000025 futex(0x61c460, FUTEX_WAKE_PRIVATE, 1) = 1
+     0.000022 write(3, "Threads started!\n", 17) = 17
+     0.000034 futex(0x7f44b761f9d0, FUTEX_WAIT, 8018, NULL) = 0
+     0.940445 alarm(0)                  = 0
+     0.000075 write(4, "(last message repeated 1 times)\n", 32) = 32
+     0.000098 write(3, "Done.\n\n", 7)  = 7
+     0.000084 write(6, "Operations performed:  0 Read, 5"..., 66) = 66
+     0.000076 write(5, "Read 0b  Written 23.266Mb  Total"..., 70) = 70
+     0.000068 write(4, " 6329.06 Requests/sec executed\n", 31) = 31
+     0.000066 close(3)                  = 0
+     0.000057 close(4)                  = 0
+     0.000043 close(5)                  = 0
+     0.000038 close(6)                  = 0
+     0.000038 write(1, "\n", 1)         = 1
+     0.000062 write(1, "Test execution summary:\n", 24) = 24
+     0.000066 write(1, "    total time:                 "..., 49) = 49
+     0.000053 write(1, "    total number of events:     "..., 46) = 46
+     0.000063 write(1, "    total time taken by event ex"..., 48) = 48
+     0.000052 write(1, "    per-request statistics:\n", 28) = 28
+     0.000054 write(1, "         min:                   "..., 54) = 54
+     0.000053 write(1, "         avg:                   "..., 54) = 54
+     0.000061 write(1, "         max:                   "..., 54) = 54
+     0.000593 write(1, "         approx.  95 percentile:"..., 54) = 54
+     0.000064 write(1, "\n", 1)         = 1
+     0.000053 write(1, "Threads fairness:\n", 18) = 18
+     0.000059 write(1, "    events (avg/stddev):        "..., 52) = 52
+     0.000055 write(1, "    execution time (avg/stddev):"..., 47) = 47
+     0.000052 write(1, "\n", 1)         = 1
+     0.000089 exit_group(0)             = ?
+     0.000217 +++ exited with 0 +++
