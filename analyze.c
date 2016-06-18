@@ -38,7 +38,7 @@ void analyzeresult()
 
 void analyzefile(file_ops* history, int ops)
 {
-	int i,j,k;
+	int i,j;
 	for (i=0; i<MAX_DETAIL_FILES; i++)
 	{
 		if ((strncmp(detail[i].filename,history[ops].op_detail[0],MAX_FILES_DETAIL)==0&&detail[i].start==true)||detail[i].start==false)

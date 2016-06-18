@@ -23,12 +23,12 @@ void visualize()
 		*/
 
 
-	char toterminal[MAX_FILES_DETAIL];
+	//char toterminal[MAX_FILES_DETAIL];
 	/*
 	char test[50];
 	memset(test,'\0',50);
 	memcpy(test,"/lib/x86_64-linux-gnu/libc.so.6",40);
-	//*test="/lib/x86_64-linux-gnu/libc.so.6";
+	test="/lib/x86_64-linux-gnu/libc.so.6";
 	printf("%s\n\n",test);
 	while (isenddir(test,k)==false)
 	{
@@ -89,7 +89,7 @@ void recursive(file_details* current, int level, int start, int root)
 	{
 
 		printlevel(toterminal,level);
-		current->start==false;
+		current->start=false;
 		return;
 	}
 	if (root==1)
@@ -97,7 +97,7 @@ void recursive(file_details* current, int level, int start, int root)
 		printlevel(toterminal,level);
 	}
 	int i;
-	int curr;
+	//int curr;
 	for (i=start; i<MAX_DETAIL_FILES; i++)
 	{
 		if (&detail[i]!=current && detail[i].start==true)

@@ -9,33 +9,38 @@
 #include "visualize.h"
 
 
-
-int main ()
+int main (int argc, char *argv[])
 {
-	//FILE* fptr;
-	char filename[20];
-	while(1)
-	{
-		printf("please input the file name you wish to parse\n ");
-		scanf("%s",filename);
-		fptr=fopen(filename,"r");
-		if (fptr)
-			break;
-		printf("invalid file name\n");
+    if (argc < 3)
+    {
+        fprintf(stderr, "Please include a filename and library file flag (1 for yes, 0 for no)!\n");
+        return -1;
+    }
 
-	}
-
-	enable_library=-1;
-	while (1)
-	{
-		printf("Do you wish to include library files? Enter 1 for yes and 0 for no\n");
-		scanf("%d",&enable_library);
-		if (enable_library==0||enable_library==1)
-			break;
-		printf("Invalid input\n");
-	}
-	parse_files(filename);
-	printtoterminal();
+    char *filename = argv[1];
+    FILE * fptr = fopen(filename, "r");
+    if (fptr == NULL)
+    {
+        fprintf(stderr, "Wrong filename\n");
+        return -1;
+    }
+    
+	enable_library = atoi(argv[2]);
+    if (enable_library != 0 && enable_library != 1)
+    {
+        fprintf(stderr, "Wrong flag value!\n");
+        return -1;
+    }
+    if (argc == 4)
+    {
+        //FILE * outfp = fopen(argv[3], "w");
+        parse_files(filename, argv[3]);
+    }
+    else
+    {   
+ 	    parse_files(filename, NULL);
+    }
+    printtoterminal();
 	analyzeresult();
 	visualize();
 }

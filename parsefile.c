@@ -7,10 +7,19 @@
 #include "parsefile.h"
 #include "parse.h"
 
-void parse_files(char* filename)
+void parse_files(char* filename, char * outfilename)
 {
-	FILE *fptr;
-	fptr=fopen(filename,"r");
+	FILE *fptr = fopen(filename,"r");
+    FILE *outfp;
+    if (outfilename != NULL) 
+    {
+        outfp = fopen(outfilename, "w");
+    }
+    else 
+    {
+        outfp = stdout;
+    }
+
 	if (fptr==NULL)
 	{
 		printf("cannot find file\n");
@@ -28,7 +37,7 @@ void parse_files(char* filename)
 		while (fgets(line, MAX_LINE_SCAN, fptr))	
 		{
 			//printf("line: %s\n",line);
-			if (isvalidoperation(line, history)==1)
+			if (isvalidoperation(outfp, line, history)==1)
 			{
 				//printf("valid\n");
 			}
@@ -39,7 +48,7 @@ void parse_files(char* filename)
 		{
 			if (history[i].start==true)
 			{
-				printresults(history,i);
+				printresults(outfp, history,i);
 			}
 		}
 
@@ -47,7 +56,7 @@ void parse_files(char* filename)
 
 }
 
-int isvalidoperation(char* line,file_ops* history)
+int isvalidoperation(FILE * outfp, char* line,file_ops* history)
 {
 	if (!line||!line[0]||!line[1]||!line[2]||!line[3])
 		return 0;
@@ -89,7 +98,7 @@ int isvalidoperation(char* line,file_ops* history)
 		{
 			if (history[i].syscall_num==sys_num)
 			{
-				printresults(history, i);
+				printresults(outfp, history, i);
 				clearhistory(history, i);
 				return 1;
 			}
@@ -165,7 +174,7 @@ int isvalidoperation(char* line,file_ops* history)
 		return 1;
 	}
 
-
+    return 1;
 }
 
 
@@ -264,8 +273,9 @@ void getops_detail(char* buffer, char* line)
 	bool done;
 	bool start;
 }file_ops;*/
+ 
 
-void printresults(file_ops* history, int ops)
+void printresults(FILE* fp, file_ops* history, int ops)
 {
 	//printf("in print result, %s\n",history[ops].op_detail[0]);
 	if (enable_library==0)
@@ -276,11 +286,11 @@ void printresults(file_ops* history, int ops)
 	int i=0;
 	for (i=0; i<=history[ops].count;i++)
 	{
-		printf("Operation %d: %s, detail: %s, bytes: %d, time: %s\n", i, history[ops].operations[i],history[ops].op_detail[i],history[ops].num_bytes[i],history[ops].time[i]);
+		fprintf(fp,"Operation %d: %s, detail: %s, bytes: %d, time: %s\n", i, history[ops].operations[i],history[ops].op_detail[i],history[ops].num_bytes[i],history[ops].time[i]);
 		//printf("sys_num: %c\n", history[ops].syscall_num);
 
 	}
-	printf("Operation %d: close\n\n",i);
+	fprintf(fp, "Operation %d: close\n\n",i);
 }
 
 void clearhistory(file_ops* history, int ops)
