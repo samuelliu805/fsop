@@ -24,23 +24,25 @@ int main (int argc, char *argv[])
         fprintf(stderr, "Wrong filename\n");
         return -1;
     }
-    
-	enable_library = atoi(argv[2]);
+
+    enable_library = atoi(argv[2]);
     if (enable_library != 0 && enable_library != 1)
     {
         fprintf(stderr, "Wrong flag value!\n");
         return -1;
     }
+    FILE * outfp;
     if (argc == 4)
     {
-        //FILE * outfp = fopen(argv[3], "w");
-        parse_files(filename, argv[3]);
+        outfp = fopen(argv[3], "w");
     }
     else
     {   
- 	    parse_files(filename, NULL);
+        outfp = stdout;
     }
+    parse_files(filename, outfp);
     printtoterminal();
-	analyzeresult();
-	visualize();
+    analyzeresult(outfp);
+
+    visualize(stdout);
 }

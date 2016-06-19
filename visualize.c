@@ -7,9 +7,9 @@
 #include "visualize.h"
 #include "parse.h"
 
-void visualize()
+void visualize(FILE * outfp)
 {
-	printf("\n------------Visualized Output------------\n");
+	fprintf(outfp,"\n------------Visualized Output------------\n");
 	int i;
 	int j;
 	int k=0;
@@ -45,7 +45,7 @@ void visualize()
 	{
 		if (detail[i].start==true)
 		{
-			printf("%s\n",detail[i].filename);
+			fprintf(outfp,"%s\n",detail[i].filename);
 			for (j=0; j<MAX_FILES_DETAIL ; j++)
 			{
 				if (j!=i && detail[j].start==true && issamedir(detail[j].filename,detail[i].filename,0))

@@ -9,26 +9,26 @@
 #include "parse.h"
 void printtoterminal()
 {
-	printf("\n------------File Operation To Terminal------------\n");
+	fprintf(stderr,"\n------------File Operation To Terminal------------\n");
 	int i;
 	for (i=0; i<MAX_TERMINAL_NUM; i++)
 		if (terminal[i].start==true)
-			printf("%s\n", terminal[i].content);
+			fprintf(stderr,"%s\n", terminal[i].content);
 }
 
-void analyzeresult()
+void analyzeresult(FILE *outfp)
 {
-	printf("\n------------Analyzing Result------------\n");
+	fprintf(outfp,"\n------------Analyzing Result------------\n");
 	int i;
 	for (i=0; i<MAX_DETAIL_FILES; i++)
 		if (detail[i].start==true)
 		{
 			if (detail[i].write_freq!=0||detail[i].read_freq!=0)
-				printf("\nFor %s\n",detail[i].filename);
+				fprintf(outfp,"\nFor %s\n",detail[i].filename);
 			if (detail[i].write_freq!=0)
-				printf("Has %d write, bytes %d, used total %f seconds\n",detail[i].write_freq,detail[i].num_bytes_write, detail[i].write_time);
+				fprintf(outfp,"Has %d write, bytes %d, used total %f seconds\n",detail[i].write_freq,detail[i].num_bytes_write, detail[i].write_time);
 			if (detail[i].read_freq!=0)
-				printf("Has %d read, bytes %d, used total %f seconds\n",detail[i].read_freq, detail[i].num_bytes_read,detail[i].read_time);
+				fprintf(outfp,"Has %d read, bytes %d, used total %f seconds\n",detail[i].read_freq, detail[i].num_bytes_read,detail[i].read_time);
 		}
 
 	//printf("------------Suggestions------------\n");
@@ -69,7 +69,7 @@ void analyzefile(file_ops* history, int ops)
 		}
 
 	}
-	printf("exceeded maximum file details recording");
+	fprintf(stderr,"exceeded maximum file details recording");
 }
 
 void clearterminaldetail()

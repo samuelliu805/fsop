@@ -7,22 +7,12 @@
 #include "parsefile.h"
 #include "parse.h"
 
-void parse_files(char* filename, char * outfilename)
+void parse_files(char* filename, FILE * outfp)
 {
 	FILE *fptr = fopen(filename,"r");
-    FILE *outfp;
-    if (outfilename != NULL) 
-    {
-        outfp = fopen(outfilename, "w");
-    }
-    else 
-    {
-        outfp = stdout;
-    }
-
 	if (fptr==NULL)
 	{
-		printf("cannot find file\n");
+		fprintf(stderr,"cannot find file\n");
 		return;
 	}
 	else
@@ -74,7 +64,7 @@ int isvalidoperation(FILE * outfp, char* line,file_ops* history)
 		}
 		if (i==MAX_PROCESS)
 		{
-			printf("Exceeded the maximum supported process\n");
+			fprintf(stderr, "Exceeded the maximum supported process\n");
 			return 1;
 		}
 
@@ -103,7 +93,7 @@ int isvalidoperation(FILE * outfp, char* line,file_ops* history)
 				return 1;
 			}
 		}
-		printf("Unable to find operations-file is not opened yet!\n");
+		fprintf(stderr,"Unable to find operations-file is not opened yet!\n");
 		return 1;
 	}
 	
@@ -170,7 +160,7 @@ int isvalidoperation(FILE * outfp, char* line,file_ops* history)
 			return 1;
 
 		}
-		printf("Unable to find operations-file is not opened yet!\n");
+		fprintf(stderr,"Unable to find operations-file is not opened yet!\n");
 		return 1;
 	}
 
@@ -240,7 +230,7 @@ void getops_detail(char* buffer, char* line)
 		
 		if (i==300)
 		{
-			printf("unable to find the detail associated with this operation\n");
+			fprintf(stderr,"unable to find the detail associated with this operation\n");
 			return;
 		}
 		
